@@ -1,13 +1,20 @@
-﻿Console.Clear();
+﻿// Два числа. Является ли первое число квадратом второго?
 
-Console.Write("Введите число: ");
-string input = Console.ReadLine();
-int number = int.Parse(input);
+Console.Clear();
 
-int sqr = number * number;
-int sqr2 = (int)Math.Pow(number, 3);
+Console.Write("Введите первое число: ");
+string inputA = Console.ReadLine();
+int numberA = int.Parse(inputA);
 
-Console.Write("Квадрат введённого числа = ");
-Console.WriteLine(sqr);
-Console.Write("Возведение в выбранную степень = ");
-Console.WriteLine(sqr2);
+Console.Write("Введите второе число: ");
+string inputB = Console.ReadLine();
+int numberB = int.Parse(inputB);
+
+if(numberA == numberB * numberB)
+{
+    Console.WriteLine("Первое число явлется квадратом второго");
+}
+else
+{
+    Console.WriteLine("Первое число НЕ явлется квадратом второго");
+}
