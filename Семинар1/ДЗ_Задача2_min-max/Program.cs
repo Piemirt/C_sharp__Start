@@ -11,7 +11,11 @@ int num1 = int.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int num2 = int.Parse(Console.ReadLine());
 
-if(num1 > num2)
+if(num1 == num2)
+{
+    Console.WriteLine("Числа равны");
+}
+else if(num1 > num2)
 {
     Console.WriteLine("max = " + num1);
     Console.WriteLine("min = " + num2);
