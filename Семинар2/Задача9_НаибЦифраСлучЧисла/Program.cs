@@ -9,3 +9,18 @@ int tens = number / 10;
 int ones = number % 10;
 Console.WriteLine(tens);
 Console.WriteLine(ones);
+
+if (tens == ones)
+{
+    Console.Write("Числа равны");
+}
+else if (tens > ones)
+{
+    Console.WriteLine("max = " + tens);
+    Console.WriteLine("min = " + ones);
+}
+else
+{
+    Console.WriteLine("max = " + ones);
+    Console.WriteLine("min = " + tens);
+}
