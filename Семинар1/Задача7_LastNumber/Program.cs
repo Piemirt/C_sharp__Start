@@ -3,7 +3,7 @@
 Console.Write("Введите число: ");
 int num = Math.Abs(int.Parse(Console.ReadLine()));
 
-if((num < 1000) & (num > 99))
+if ((num < 1000) & (num > 99))
 {
     Console.WriteLine(num % 10);
 }
