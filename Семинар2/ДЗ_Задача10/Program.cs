@@ -7,6 +7,7 @@ Console.Clear();
 
 Console.Write("Введите трёхзначное число: ");
 int a = int.Parse(Console.ReadLine());
+a = Math.Abs(a);
 
 if (a > 99 && a < 1000)
     Console.WriteLine($"Вторая цифра числа = {a / 10 % 10}");

@@ -5,3 +5,14 @@
 
 Console.Clear();
 
+Console.Write("Введите число: ");
+int a = int.Parse(ConsoleReadLine());
+
+if (a > 99)
+{
+    
+}
+else
+{
+    Console.WriteLine("Третьей цифры тут нет!");
+}
