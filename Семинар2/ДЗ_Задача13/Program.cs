@@ -6,11 +6,16 @@
 Console.Clear();
 
 Console.Write("Введите число: ");
-int a = int.Parse(ConsoleReadLine());
+int a = int.Parse(Console.ReadLine());
+a = Math.Abs(a);
 
 if (a > 99)
 {
-    
+    while (a > 999)
+    {
+        a /= 10;
+    }
+    Console.WriteLine($"Третья цифра числа = {a % 10}");
 }
 else
 {
