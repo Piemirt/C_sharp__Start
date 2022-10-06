@@ -5,3 +5,22 @@
 
 Console.Clear();
 
+Console.WriteLine("Введите цифру: ");
+int a = int.Parse(Console.ReadLine());
+a = Math.Abs(a);
+
+if (a > 0 && a < 8)
+{
+    if (a == 6 || a == 7)
+    {
+        Console.WriteLine("Это выходной день");
+    }
+    else
+    {
+        Console.WriteLine("Это будний день");
+    }
+}
+else
+{
+    Console.WriteLine("А это точно день недели?");
+}
