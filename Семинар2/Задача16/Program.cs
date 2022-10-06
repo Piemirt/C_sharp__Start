@@ -7,7 +7,14 @@ int num1 = int.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
 int num2 = int.Parse(Console.ReadLine());
 
+/* 
 if (num1 == num2 * num2 || num2 == num1 * num1)
     Console.WriteLine("Является квадратом");
 else
-    Console.WriteLine("НЕ является квадратом");
+    Console.WriteLine("НЕ является квадратом"); 
+*/
+
+if (num1 == Math.Pow(num2, 2) || num2 == Math.Pow(num1,2))
+    Console.WriteLine("Является квадратом");
+else
+    Console.WriteLine("НЕ является квадратом"); 
