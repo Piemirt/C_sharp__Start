@@ -3,3 +3,29 @@
 
 Console.Clear();
 
+Random random = new Random();
+int x = random.Next(-10, 11);
+int y = random.Next(-10, 11);
+
+Console.WriteLine($"A({x}, {y})");
+
+if (x > 0 && y > 0)
+{
+    Console.WriteLine("Точка находится в 1 четверти");
+}
+else if (x < 0 && y > 0)
+{
+    Console.WriteLine("Точка находится во 2 четверти");
+}
+else if (x < 0 && y < 0)
+{
+    Console.WriteLine("Точка находится в 3 четверти");
+}
+else if (x > 0 && y < 0)
+{
+    Console.WriteLine("Точка находится в 4 четверти");
+}
+else
+{
+    Console.WriteLine("Введены некорректные данные");
+}
