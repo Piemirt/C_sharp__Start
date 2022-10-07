@@ -27,5 +27,5 @@ else if (x > 0 && y < 0)
 }
 else
 {
-    Console.WriteLine("Введены некорректные данные");
+    Console.WriteLine("Точка находится на одной из осей");
 }
