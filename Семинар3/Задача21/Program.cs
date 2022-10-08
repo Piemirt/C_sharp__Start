@@ -6,14 +6,14 @@ Console.Clear();
 
 Console.WriteLine("Введите координаты точки А: ");
 Console.Write("x = ");
-int ax = int.Parse(Console.ReadLine());
+int ax = int.Parse(Console.ReadLine()!);
 Console.Write("y = ");
-int ay = int.Parse(Console.ReadLine());
+int ay = int.Parse(Console.ReadLine()!);
 Console.WriteLine("Введите координаты точки B: ");
 Console.Write("x = ");
-int bx = int.Parse(Console.ReadLine());
+int bx = int.Parse(Console.ReadLine()!);
 Console.Write("y = ");
-int by = int.Parse(Console.ReadLine());
+int by = int.Parse(Console.ReadLine()!);
 
 int p = bx - ax;
 int q = by - ay;

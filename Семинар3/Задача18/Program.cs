@@ -4,7 +4,7 @@
 Console.Clear();
 
 Console.WriteLine("Введите номер четверти: ");
-int a = int.Parse(Console.ReadLine());
+int a = int.Parse(Console.ReadLine()!);
 
 if (a == 1)
 {

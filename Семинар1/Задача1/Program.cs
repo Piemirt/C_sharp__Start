@@ -3,11 +3,11 @@
 Console.Clear();
 
 Console.Write("Введите первое число: ");
-string inputA = Console.ReadLine();
+string inputA = Console.ReadLine()!;
 int numberA = int.Parse(inputA);
 
 Console.Write("Введите второе число: ");
-string inputB = Console.ReadLine();
+string inputB = Console.ReadLine()!;
 int numberB = int.Parse(inputB);
 
 if(numberA == numberB * numberB)

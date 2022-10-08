@@ -6,7 +6,7 @@
 Console.Clear();
 
 Console.WriteLine("Введите цифру: ");
-int a = int.Parse(Console.ReadLine());
+int a = int.Parse(Console.ReadLine()!);
 a = Math.Abs(a);
 string[] week = {"пн", "вт", "ср", "чт", "пт", "сб", "вс"};
 

@@ -1,7 +1,7 @@
 ﻿Console.Clear();
 
 Console.Write("Введите число: ");
-int num = Math.Abs(int.Parse(Console.ReadLine()));
+int num = Math.Abs(int.Parse(Console.ReadLine()!));
 
 if ((num < 1000) & (num > 99))
 {
