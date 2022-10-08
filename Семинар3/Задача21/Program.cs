@@ -4,4 +4,20 @@
 
 Console.Clear();
 
-Console.WriteLine();
+Console.WriteLine("Введите координаты точки А: ");
+Console.Write("x = ");
+int ax = int.Parse(Console.ReadLine());
+Console.Write("y = ");
+int ay = int.Parse(Console.ReadLine());
+Console.WriteLine("Введите координаты точки B: ");
+Console.Write("x = ");
+int bx = int.Parse(Console.ReadLine());
+Console.Write("y = ");
+int by = int.Parse(Console.ReadLine());
+
+int p = bx - ax;
+int q = by - ay;
+
+double length = Math.Sqrt(p * p + q * q);
+length = Math.Round(length, 2);
+Console.WriteLine($"Расстояние между точками = {length}");
