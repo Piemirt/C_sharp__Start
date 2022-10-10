@@ -4,3 +4,19 @@
 
 Console.Clear();
 
+Console.WriteLine("Введите координаты точки A в трёхмерном пространстве: ");
+Console.Write("x = ");
+int ax = int.Parse(Console.ReadLine()!);
+Console.Write("y = ");
+int ay = int.Parse(Console.ReadLine()!);
+Console.Write("z = ");
+int az = int.Parse(Console.ReadLine()!);
+Console.WriteLine("Введите координаты точки B в трёхмерном пространстве: ");
+Console.Write("x = ");
+int bx = int.Parse(Console.ReadLine()!);
+Console.Write("y = ");
+int by = int.Parse(Console.ReadLine()!);
+Console.Write("z = ");
+int bz = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"");
