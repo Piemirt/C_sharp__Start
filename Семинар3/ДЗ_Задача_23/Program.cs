@@ -4,3 +4,11 @@
 
 Console.Clear();
 
+Console.Write("Введите число: ");
+int num = int.Parse(Console.ReadLine()!);
+
+for (int i = 1; i <= num; i++)
+{
+    double cube = Math.Pow(i, 3);
+    Console.WriteLine($"| {i} || {cube} |");
+}

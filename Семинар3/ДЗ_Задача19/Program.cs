@@ -5,3 +5,14 @@
 
 Console.Clear();
 
+Console.Write("Введите ПЯТИзначное число: ");
+int num = int.Parse(Console.ReadLine()!);
+
+if 
+{
+
+}
+else
+{
+
+}
