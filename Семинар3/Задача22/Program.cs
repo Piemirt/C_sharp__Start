@@ -7,3 +7,8 @@ Console.Clear();
 Console.Write("Введите число: ");
 int n = int.Parse(Console.ReadLine()!);
 
+for (int i = 1; i <= n; i++)
+{
+    double square = Math.Pow(i, 2);
+    Console.WriteLine($"| {i} || {square} |");
+}
