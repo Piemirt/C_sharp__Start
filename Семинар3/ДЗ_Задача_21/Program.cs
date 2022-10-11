@@ -19,4 +19,8 @@ int by = int.Parse(Console.ReadLine()!);
 Console.Write("z = ");
 int bz = int.Parse(Console.ReadLine()!);
 
+int p = 
+int q = 
+int r = 
+
 Console.WriteLine($"");
