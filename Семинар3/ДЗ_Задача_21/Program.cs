@@ -19,8 +19,11 @@ int by = int.Parse(Console.ReadLine()!);
 Console.Write("z = ");
 int bz = int.Parse(Console.ReadLine()!);
 
-int p = 
-int q = 
-int r = 
+int p = bx - ax;
+int q = by - ay;
+int r = bz - az;
 
-Console.WriteLine($"");
+double result = Math.Sqrt(Math.Pow(p, 2) + Math.Pow(q, 2) + Math.Pow(r, 2));
+result = Math.Round(result, 2);
+
+Console.WriteLine(result);
