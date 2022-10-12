@@ -2,19 +2,21 @@
 
 Console.Clear();
 
-Random random = new Random();
-int size = random.Next(4, 10);
+//Random random = new Random();
+//int size = random.Next(4, 10);
+Console.Write("Введите размер массива: ");
+int size = int.Parse(Console.ReadLine()!);
 int[] numbers = new int[size];
 Console.WriteLine(size);
 
 // Заполнение массива с клавиатуры:
-for (int i = 0; i < numbers.Length; i++)
-{
-    Console.Write($"Введите {i + 1}-й элемент массива: ");
-    numbers[i] = int.Parse(Console.ReadLine()!);
-}
+// for (int i = 0; i < numbers.Length; i++)
+// {
+//     Console.Write($"Введите {i + 1}-й элемент массива: ");
+//     numbers[i] = int.Parse(Console.ReadLine()!);
+// }
 
-//FillArray(numbers);
+FillArray(numbers);
 // for (int i = 0; i < size; i++)
 // {
 //     numbers[i] = random.Next(0, 2);
