@@ -4,3 +4,6 @@
 
 Console.Clear();
 
+int[] array = new int[10];
+int[] array2 = new int[5];
+
