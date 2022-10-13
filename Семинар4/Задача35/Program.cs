@@ -2,3 +2,17 @@
 
 Console.Clear();
 
+int[] array = new int[123];
+
+
+
+Console.WriteLine($"Количество элементов от 10 до 99 равно {c} ");
+
+void FillArray(int[] array)
+{
+    Random random = new Random();
+    for (int i = 0; i < array.Length; i++)
+    {
+        array[i] = random.Next(0, 201);
+    }
+}
