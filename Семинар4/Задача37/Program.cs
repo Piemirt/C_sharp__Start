@@ -4,20 +4,36 @@
 
 Console.Clear();
 
-int[] array = new int[10];
-int[] array2 = new int[5];
+int[] array = new int[11];
 
 FillArray(array);
 PrintArray(array);
-Product(array, array2);
+int[] array2 = Product(array);
 PrintArray(array2);
 
-void Product(int[] arr, int[] arr2)
+int[] Product(int[] arr)
 {
-    for (int i = 0; i < arr.Length / 2; i++)
+    int[] arr2;
+    if (arr.Length % 2 == 0)
     {
-        arr2[i] = arr[i] * arr[arr.Length - 1 - i];
+        arr2 = new int[arr.Length / 2];
+        for (int i = 0; i < arr.Length / 2; i++)
+        {
+            arr2[i] = arr[i] * arr[arr.Length - 1 - i];
+        }
     }
+    else
+    {
+        arr2 = new int[arr.Length / 2 + 1];
+        for (int i = 0; i < arr.Length / 2 + 1; i++)
+        {
+            if (i == arr.Length / 2)
+                arr2[i] = arr[i];
+            else
+                arr2[i] = arr[i] * arr[arr.Length - 1 - i];
+        }
+    }
+    return arr2;
 }
 
 void FillArray(int[] array)
