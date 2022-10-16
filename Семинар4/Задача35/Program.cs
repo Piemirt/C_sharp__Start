@@ -67,7 +67,6 @@ void FindArray(int[] numbers)
         if (numbers[i] >= 10 && numbers[i] <= 99)
             count++;
     }
-    //Console.WriteLine(count);
     Console.WriteLine($"Количество элементов от 10 до 99 равно {count} ");
 }
 
