@@ -8,24 +8,43 @@ int num = int.Parse(Console.ReadLine()!);
 int[] numbers = new int[10];
 
 FillArray(numbers);
-if (FindNumber(numbers, num))
-    Console.WriteLine($"Число {num} присутствует в массиве");
-else
-    Console.WriteLine($"Числа {num} нет в массиве");
+// if (FindNumber(numbers, num))
+//     Console.WriteLine($"Число {num} присутствует в массиве");
+// else
+//     Console.WriteLine($"Числа {num} нет в массиве");
+
+CheckArray(numbers, num);
 
 PrintArray(numbers);
 
-bool FindNumber(int[] numbers, int num)
+void CheckArray(int[] numbers, int num)
 {
+    bool flag = false;
     for (int i = 0; i < numbers.Length; i++)
     {
-        if (numbers[i] == num)
+        if (num == numbers[i])
         {
-            return true;
+            flag = true;
         }
     }
-    return false;
+    if (flag == true)
+        Console.WriteLine($"Число {num} находится в массиве");
+    else
+        Console.WriteLine($"Число {num} не находится в массиве");
 }
+
+// bool FindNumber(int[] numbers, int num)
+// {
+//     for (int i = 0; i < numbers.Length; i++)
+//     {
+//         if (numbers[i] == num)
+//         {
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
 void FillArray(int[] numbers)
 {
     Random random = new Random();
@@ -34,6 +53,7 @@ void FillArray(int[] numbers)
         numbers[i] = random.Next(0, 10);
     }
 }
+
 void PrintArray(int[] numbers)
 {
     int count = numbers.Length;
