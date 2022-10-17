@@ -64,10 +64,9 @@ Console.Write("Введите числа через пробел: ");
 string input = Console.ReadLine()!;
 int[] array = ParseToArray(input);
 
-Console.Write("Сумма положительных элементов = ");
-Console.WriteLine(PositiveSum(array));
-Console.Write("Сумма отрицательных элементов = ");
-Console.WriteLine(NegativeSum(array));
+Console.Write($"Сумма положительных элементов = {PositiveSum(array)}");
+Console.WriteLine();
+Console.Write($"Сумма отрицательных элементов = {NegativeSum(array)}");
 
 int[] ParseToArray(string str)
 {
