@@ -10,14 +10,19 @@ int[] numbers = new int[size];
 
 FillArray(numbers, 100, 1000);
 PrintArray(numbers);
-
-int count = 0;
-for (int i = 0; i < size; i++)
-{
-    if (numbers[i] % 2 == 0)
-        count++;
-}
+int count = EvenNumbers(numbers);
 Console.WriteLine("Количество чётных чисел = " + count);
+
+int EvenNumbers(int[] numbers)
+{
+    int count = 0;
+    for (int i = 0; i < size; i++)
+    {
+        if (numbers[i] % 2 == 0)
+            count++;
+    }
+    return count;
+}
 
 void FillArray(int[] numbers, int minValue = 10, int maxValue = 100)
 {
