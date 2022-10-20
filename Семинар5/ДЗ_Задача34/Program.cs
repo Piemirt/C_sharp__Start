@@ -10,8 +10,8 @@ int[] numbers = new int[size];
 
 FillArray(numbers, 100, 1000);
 PrintArray(numbers);
-int count = EvenNumbers(numbers);
-Console.WriteLine("Количество чётных чисел = " + count);
+int countEven = EvenNumbers(numbers);
+Console.WriteLine("Количество чётных чисел = " + countEven);
 
 int EvenNumbers(int[] numbers)
 {

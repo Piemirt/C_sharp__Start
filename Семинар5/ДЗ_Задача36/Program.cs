@@ -4,10 +4,10 @@
 
 Console.Clear();
 
-int size = 8;
+int size = 6;
 int[] numbers = new int[size];
 
-FillArray(numbers, 0, 1000);
+FillArray(numbers, -10, 10);
 PrintArray(numbers);
 int sum = GetSum(numbers);
 Console.WriteLine("Сумма элементов на нечётных позициях = " + sum);
@@ -17,8 +17,7 @@ int GetSum(int[] numbers)
     int sum = 0;
     for (int i = 1; i < size; i += 2)
     {
-        if (i % 2 == 1)
-            sum += numbers[i];
+        sum += numbers[i];
     }
     return sum;
 }
