@@ -3,3 +3,18 @@
 
 Console.Clear();
 
+Console.Write("Введите число: ");
+int a = int.Parse(Console.ReadLine()!);
+Console.WriteLine(RecurSum(a));
+
+int RecurSum(int a)
+{
+    if (a > 1)
+    {
+        return a + RecurSum(a - 1);
+    }
+    else
+    {
+        return 1;
+    }
+}
