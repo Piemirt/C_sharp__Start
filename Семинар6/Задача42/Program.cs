@@ -21,7 +21,7 @@ int InputMessage(string message)
     return int.Parse(Console.ReadLine()!);
 }
 */
-// Решение через конвертацию с учётом системы исчисления: --->>>
+// Решение через конвертацию с учётом системы счисления: --->>>
 
 Console.Clear();
 

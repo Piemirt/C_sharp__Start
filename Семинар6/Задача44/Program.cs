@@ -18,12 +18,11 @@ PrintArray(numbers);
 void PrintArray(double[] numbers)
 {
     int length = numbers.Length;
-    Console.Write("[ ");
     for (int i = 0; i < length; i++)
     {
         Console.Write(numbers[i]);
         if (i < length - 1)
-            Console.Write(", ");
+            Console.Write(" ");
     }
-    Console.WriteLine(" ]");
+    Console.WriteLine();
 }
