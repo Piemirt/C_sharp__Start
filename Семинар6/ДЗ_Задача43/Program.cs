@@ -4,3 +4,18 @@
 
 Console.Clear();
 
+Console.Write("Введите координату b1: ");
+double b1 = int.Parse(Console.ReadLine()!);
+Console.Write("Введите координату k1: ");
+double k1 = int.Parse(Console.ReadLine()!);
+Console.Write("Введите координату b2: ");
+double b2 = int.Parse(Console.ReadLine()!);
+Console.Write("Введите координату k2: ");
+double k2 = int.Parse(Console.ReadLine()!);
+
+double x = (b2 - b1) / (k1 - k2);
+x = Math.Round(x, 2);
+double y = k1 * x + b1;
+y = Math.Round(y, 2);
+
+Console.WriteLine($"Точка пересечения А ({x}; {y})");
