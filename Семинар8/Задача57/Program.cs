@@ -9,7 +9,7 @@ int rows = random.Next(4, 8);
 int columns = random.Next(4, 8);
 int[,] numbers = new int[rows, columns];
 Console.WriteLine($"Массив размером: {rows} * {columns} ");
-FillArray(numbers);
+FillArray(numbers, 0, 9);
 PrintArray(numbers);
 int[] counts = new int[10];
 
@@ -26,8 +26,9 @@ for (int i = 0; i < 10; i++)
     Console.WriteLine($"Количество {i} в массиве: {counts[i]}");
 }
 
-void FillArray(int[,] numbers)
+void FillArray(int[,] numbers, int minValue = 0, int maxValue = 0)
 {
+    maxValue++;
     Random random = new Random();
     int rows = numbers.GetLength(0);
     int columns = numbers.GetLength(1);
@@ -35,7 +36,7 @@ void FillArray(int[,] numbers)
     {
         for (int j = 0; j < columns; j++)
         {
-            numbers[i, j] = random.Next(0, 10);
+            numbers[i, j] = random.Next(minValue, maxValue);
         }
     }
 }
