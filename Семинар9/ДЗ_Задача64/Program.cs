@@ -3,3 +3,24 @@
 
 Console.Clear();
 
+Console.Write("Введите число: ");
+int number = Convert.ToInt32(Console.ReadLine()!);
+FindNumRecursion(number);
+
+void FindNumRecursion(int number)
+{
+    if (number > 1)
+    {
+        Console.Write($"{number}, ");
+        FindNumRecursion(number - 1);
+    }
+    else if (number == 1)
+    {
+        Console.Write(number);
+        Console.WriteLine();
+    }
+    if (number <= 0)
+    {
+        Console.WriteLine($"Натуральных чисел от 1 до {number} нет");
+    }
+}
