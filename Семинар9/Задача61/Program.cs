@@ -3,32 +3,31 @@
 
 Console.Clear();
 
-int rows = ReadInt("Введите количество строк: ");
-int columns = ReadInt("Введите количество столбцов: ");
+Random random = new Random();
+int rows = random.Next(4, 7);
+int columns = random.Next(4, 7);
+int rowsSecond = columns;
+int columnsSecond = random.Next(4, 7);
 int[,] matrix = new int[rows, columns];
-int[,] secondMatrix = new int[rows, columns];
-int[,] resultMatrix = new int[rows, columns];
+int[,] secondMatrix = new int[rowsSecond, columnsSecond];
 
-FillMatrix(matrix);
+FillMatrix(matrix, 0, 5);
 Console.WriteLine("Первая матрица: ");
 PrintMatrix(matrix);
 
 
-FillMatrix(secondMatrix);
+FillMatrix(secondMatrix, 0, 5);
 Console.WriteLine("Вторая матрица: ");
 PrintMatrix(secondMatrix);
 
+int[,] resultMatrix = new int[rows, columnsSecond];
 
-if (matrix.GetLength(0) != secondMatrix.GetLength(1))
+// Строка первой матрицы умножается на столбец второй матрицы и всё суммируется. Получается первый элемент результирующей матрицы.
+for (int i = 0; i < rows; i++)
 {
-    Console.WriteLine(" Нельзя перемножить ");
-    return;
-}
-for (int i = 0; i < matrix.GetLength(0); i++)
-{
-    for (int j = 0; j < secondMatrix.GetLength(1); j++)
+    for (int j = 0; j < columnsSecond; j++)
     {
-        for (int k = 0; k < matrix.GetLength(1); k++)
+        for (int k = 0; k < rowsSecond; k++)
         {
             resultMatrix[i, j] += matrix[i, k] * secondMatrix[k, j];
         }
@@ -39,19 +38,13 @@ Console.WriteLine("Результат произведения двух матр
 PrintMatrix(resultMatrix);
 
 
-int ReadInt(string message)
-{
-    Console.Write(message);
-    return int.Parse(Console.ReadLine()!);
-}
-
-void FillMatrix(int[,] matrix)
+void FillMatrix(int[,] matrix, int minValue, int maxValue)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            matrix[i, j] = new Random().Next(1, 10);
+            matrix[i, j] = new Random().Next(minValue, maxValue);
         }
     }
 }
